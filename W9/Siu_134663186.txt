@@ -1,0 +1,43 @@
+/**********************************************
+Workshop # 9
+Course: JAC444 - Semester Winter 2023
+Last Name: Siu
+First Name: Chun Kit Jacky
+ID: 134663186
+Section: NAA
+This assignment represents my own work in accordance with Seneca Academic Policy.
+Signature
+Date: 2023-04-05
+**********************************************/
+
+
+Workshop 9 had us using threads to make the program
+load faster, because creating the Hashmap of Key and 
+value pairs of all the words (keys) in the dictionary and compute a list of
+words (also from the dictionary) that is  of edited distance 1 from the key (a word).
+This key and value pair is determined for each and every word from the dictionary.
+Some has a list of word some doesn't but the whole point is that creating 
+a hashmap of that proportion takes allot of processing time so threads has to 
+be used. The main method which is that program itself took me a night with no sleep and
+and a day to figure out as I ran into problems with the first code that i wrote which i could figure
+out where the clinches was coming. And the second version was completely Banana and didn't work. 
+Finally I reverted back to my first solution to break it and it didn't. I couldn't break it.
+But here is my logic for my main method which i don't know if it is sounded.
+It will ask for a first word and a second word.
+Determine whether the dictionary List contain those words, if not it will ask for them again.
+It will exit the program if the user entersan empty string. It will first calculate the Edit Distance
+ between the two words. The two word is the sameit will print out the word and an Edit Distance of 0 to the console. 
+Otherwise it will determine the homeInDistance from the first word to the second word. 
+Which is determine base on the edit distance between the two words. It will input a testword 
+as the firstword and the secondword\ into the method editDistance. Determine its calculated distance. 
+If the calculated distance is equalto the homeInDistance then the homeInDistance is decremented by 1.  The homeInDistance is
+the edit Distance (the right amount of distance) of a Word to the second word given 
+the edit position it should be in towards the Second word.  The testword is added to LinkedList of words
+ called closingInWords which will be the result. the testword is key gotten from the Value (the LinkedList of 
+words). The testword that is the right word will be use to get the next List of words from the HashMap to be tested.
+The process would continue until the HomeInDistance equals -1 which means the second word has been found or
+reached. If the is no Path is found then it will print out on the the console "No path exist between the two words!"
+else it will print out the firstword and then the list of the closing in word in the right order including the second
+word that has been found or reached. Lastly it will output the Edit Distance between the firstword and the secondword.
+This process is in a loop and until the user enters an empty String at the beginning of the program to exit the
+program. Hopefully it make sense as i couldn't think of another solution.
